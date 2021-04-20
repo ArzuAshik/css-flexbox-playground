@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox Playground</title>
+    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="play.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h4>.container</h4>
+        <div class="menu open">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="output">
+            <div class="item a" id="a">A</div>
+            <div class="item b" id="b">B</div>
+            <div class="item c" id="c">C</div>
+            <div class="item d" id="d">D</div>
+            <div class="item e" id="e">E</div>
+        </div>
+        
+        <div id="controller">
+            <h2>Play With Flex</h2>
+            <div class="menu close">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="separator">
+                <div class="control">
+                    <h3>flex-direction</h3>
+                    <select name="flex-direction" id="flex-direction">
+                        <option value="row"><span>row</span></option>
+                        <option value="column">column</option>
+                        <option value="row-reverse">row-reverse</option>
+                        <option value="column-reverse">column-reverse</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <h3>flex-wrap</h3>
+                    <select name="flex-wrap" id="flex-wrap">
+                        <option value="nowrap">nowrap</option>
+                        <option value="wrap">wrap</option>
+                        <option value="wrap-reverse">column-reverse</option>
+                    </select>
+                </div>
+            </div>
+            <div class="separator">
+                <div class="control">
+                    <h3>justify-content :</h3>
+                    <select name="justify-content" id="justify-content">
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <h3>align-items :</h3>
+                    <select name="align-items" id="align-items">
+                        <option value="stretch">stretch</option>
+                        <option value="center">center</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="baseline">baseline</option>
+                        <option value="initial">initial</option>
+                        <option value="inherit">inherit</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <h3>align-content :</h3>
+                    <select name="align-content" id="align-content">
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="separator">
+                <div class="control">
+                    <h3>Select Element :</h3>
+                    <select name="element" id="element">
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        <option value="d">D</option>
+                        <option value="e">E</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <h3>order :</h3>
+                    <input name="order" id="order" type="number" placeholder="0">
+                </div>
+                <div class="control">
+                    <h3>flex-basis :</h3>
+                    <input name="flex-basis" id="flex-basis" type="text" placeholder="200px">
+                </div>
+                <div class="control">
+                    <h3>min-width :</h3>
+                    <input name="min-width" id="min-width" type="text" placeholder="200px">
+                </div>
+                <div class="control">
+                    <h3>min-height :</h3>
+                    <input name="min-width" id="min-height" type="text" placeholder="200px">
+                </div>
+                <div class="control">
+                    <h3>flex-grow :</h3>
+                    <select name="flex-grow" id="flex-grow">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <h3>flex-shrink :</h3>
+                    <select name="flex-shrink" id="flex-shrink">
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                    </select>
+                </div>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>

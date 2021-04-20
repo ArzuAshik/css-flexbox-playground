@@ -1,0 +1,190 @@
+:root {
+  --bgc: transparent;
+  --flex-basis: 200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+html {
+  font-size: 10px;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  padding: 2rem;
+  margin: 2rem;
+  min-height: calc(100vh - 4rem);
+  border: 3px dashed lightgray;
+  justify-content: space-between;
+  position: relative;
+}
+.container > h4 {
+  font-size: 1.6rem;
+  color: lightgray;
+  position: absolute;
+  top: -13px;
+  background: #fff;
+  padding: 0 10px;
+}
+
+.container .menu {
+  width: 40px;
+  position: absolute;
+  top: -20px;
+  right: -5px;
+  cursor: pointer;
+  padding: 0 5px;
+  border-radius: 3px;
+  display: none;
+}
+
+.container .menu.open {
+  background: #fff;
+}
+
+.container .menu span {
+  display: block;
+  background-color: #000;
+}
+
+.container .menu:hover span {
+  background-color: deepskyblue;
+}
+
+.container .menu span::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 7px 0;
+}
+
+#controller {
+  flex-basis: 40%;
+  max-height: calc(100vh - 9rem);
+  max-width: 450px;
+  overflow: auto;
+  background: lightgray;
+  position: relative;
+}
+
+#controller h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.8rem;
+  border-bottom: 1px solid gray;
+}
+
+#controller .close {
+  top: 0;
+  right: 0;
+}
+
+.separator {
+  margin: 10px 0;
+  border-bottom: 1px dashed gray;
+}
+.separator .control {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.separator .control h3 {
+  flex-basis: 60%;
+  font-size: 1.6rem;
+  padding: 8px;
+}
+
+.separator .control select {
+  font-size: 1.6rem;
+  padding: 8px 10px;
+  border-radius: 5px;
+  flex-basis: 100px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.separator .control select option {
+  background: #fff;
+}
+
+.separator .control input {
+  text-align: center;
+  flex-basis: 100px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+  -moz-appearance: textfield;
+}
+.separator .control input::-webkit-outer-spin-button,
+.separator .control input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.separator .control select:focus-within,
+.separator .control input:focus-within {
+  border: 1px solid DeepSkyBlue;
+  background: skyblue;
+}
+
+/* style for output section */
+#output {
+  display: flex;
+  flex-basis: 57%;
+  flex-grow: 1;
+  border: 2px dashed lightgray;
+}
+
+#output > div {
+  flex-basis: var(--flex-basis);
+  min-height: 200px;
+  background-color: var(--bgc);
+  font-size: 2rem;
+  text-align: center;
+}
+
+#a {
+  --bgc: #3498db;
+}
+#b {
+  --bgc: #1abc9c;
+}
+#c {
+  --bgc: #e67e22;
+}
+#d {
+  --bgc: #9b59b6;
+}
+#e {
+  --bgc: #2ecc71;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: block;
+    position: relative;
+  }
+  #output {
+    height: calc(100vh - 9rem);
+  }
+  #controller {
+    position: absolute;
+    max-height: calc(100vh);
+    right: -100%;
+    top: -25px;
+    bottom: -25px;
+  }
+  #controller.show {
+    right: -20px;
+  }
+  .container .menu {
+    display: block;
+  }
+}
