@@ -1,6 +1,6 @@
 :root {
   --bgc: transparent;
-  --flex-basis: 200px;
+  --flex-basis: 150px;
 }
 * {
   margin: 0;
@@ -144,7 +144,6 @@ body {
 
 #output > div {
   flex-basis: var(--flex-basis);
-  min-height: 200px;
   background-color: var(--bgc);
   font-size: 2rem;
   text-align: center;
