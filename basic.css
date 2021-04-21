@@ -35,8 +35,8 @@ body {
 .container .menu {
   width: 40px;
   position: absolute;
-  top: -20px;
-  right: -5px;
+  top: 0;
+  right: 0;
   cursor: pointer;
   padding: 0 5px;
   border-radius: 3px;
@@ -167,6 +167,7 @@ body {
   .container {
     display: block;
     position: relative;
+    overflow: hidden;
   }
   #output {
     height: calc(100vh - 9rem);
@@ -174,12 +175,12 @@ body {
   #controller {
     position: absolute;
     max-height: calc(100vh);
-    right: -100%;
-    top: -25px;
-    bottom: -25px;
+    right: -400px;
+    top: 0;
+    bottom: 25px;
   }
   #controller.show {
-    right: -20px;
+    right: 0;
   }
   .container .menu {
     display: block;
